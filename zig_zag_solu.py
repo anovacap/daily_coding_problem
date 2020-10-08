@@ -1,5 +1,7 @@
 #!/usr/bin/python
 # Strings 2.2 solution
+# zigzag has 2 loops - a list of spaces the length of the given word is created as line. The while loop puts the letters in the 
+# right position in line by moving i spaces + 1. spaces uses get_spaces which either return
 # k = the pivot point where zig turns to zag - word = string to alter - 
 
 def get_spaces(row, desc, k):

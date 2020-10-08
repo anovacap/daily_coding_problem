@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # String 2.3 given a string and an integer, zig_zag the word the integer patern
-
+# my version - not good 
 def zig_zag(word, i):
     new_string = ''
     new_i = (i - 1) * 2 - 1
