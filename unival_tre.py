@@ -76,6 +76,8 @@ if __name__ == "__main__":
     tree.insert(root, 20)
     tree.insert(root, 30)
     tree.insert(root, 40)
+    tree.insert(root, 1)
+    tree.insert(root, 2)
     tree.insert(root, 70)
     tree.insert(root, 60)
     tree.insert(root, 80)
