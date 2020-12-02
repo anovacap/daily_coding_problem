@@ -49,6 +49,25 @@ class Tree:
                 return temp
         return node
     
+    def is_unival(self, root):
+        return self.unival_helper(root, root.data)
+    
+    def unival_helper(self, root, val):
+        if root is None:
+            return True
+        if root.data == val:
+            return self.unival_helper(root.left, val) and self.unival_helper(root.right, val)
+        return False
+
+    def count_unival_subtree(self, root):
+        if root is None:
+            return 0
+        left = self.count_unival_subtree(root.left)
+        right = self.count_unival_subtree(root.right)
+        return 1 + left + right if self.is_unival(root) else left + right
+                
+
+    
     def traverse_inorder(self, root):
         if root is not None:
             self.traverse_inorder(root.left)
@@ -89,6 +108,9 @@ if __name__ == "__main__":
 
     print ("Traverse Postorder")
     tree.traverse_postorder(root)
+
+    print("Count unival tree")
+    tree.count_unival_subtree(root)
             
 
     
