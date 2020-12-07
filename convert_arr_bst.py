@@ -1,8 +1,7 @@
 #!/usr/bin/python
-# Daily Coding Problem 7.1 - Find floor and ceiling
-# Given a bst, find the floor andceiling of a given integer. Floor is the highest element 
-# In the tree less than or equal to an integer - ceiling is the lowest element 
-# In the tree greater than or equal to the integer
+# Daily Coding Problem 7.2 - Convert a sorted array into a binary search tree
+# Given a sorted array, create a binary search tree by taking the middle of
+# the array as the root and building the tree from there.
 
 class Node:
     def __init__(self, data, left=None, right=None):
@@ -77,7 +76,7 @@ class BST:
             floor, ceil = self.find_floor_n_ceil(root.right, val, root.data, ceil)
         return floor, ceil
 
-    def make_bst(self, arr):
+    def make_bst(self, arr): # takes an array returns the root of a bst
         if not arr:
             return None
         mid = len(arr) // 2
